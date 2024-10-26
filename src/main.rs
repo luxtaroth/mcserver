@@ -11,6 +11,7 @@ mod run;
 mod setup;
 mod start;
 mod stop;
+mod tailscale;
 
 use run::Run;
 fn main() {
