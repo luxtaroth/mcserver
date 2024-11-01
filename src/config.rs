@@ -4,27 +4,27 @@ use std::io::Error as IoError;
 use toml;
 
 #[derive(Serialize, Deserialize, Debug)]
-struct ConfigToml {
-    mcserver: Option<ConfigTomlMcServer>,
-    server: Option<ConfigTomlServer>,
+pub struct ConfigToml {
+    pub mcserver: Option<ConfigTomlMcServer>,
+    pub server: Option<ConfigTomlServer>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct ConfigTomlMcServer {
-    project_name: Option<String>,
-    logfile: Option<String>,
-    tunnel: Option<String>,
-    java: Option<String>,
+pub struct ConfigTomlMcServer {
+    pub project_name: Option<String>,
+    pub logfile: Option<String>,
+    pub tunnel: Option<String>,
+    pub java: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct ConfigTomlServer {
-    online_mode: Option<bool>,
-    version: Option<String>,
-    server_type: Option<String>,
-    category: Option<String>,
-    providor: Option<String>,
-    url: Option<String>,
+pub struct ConfigTomlServer {
+    pub online_mode: Option<bool>,
+    pub version: Option<String>,
+    pub server_type: Option<String>,
+    pub category: Option<String>,
+    pub providor: Option<String>,
+    pub url: Option<String>,
 }
 
 #[derive(Debug)]

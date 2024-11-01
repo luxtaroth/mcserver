@@ -11,3 +11,6 @@ toml = "0.8.19"
 reqwest = { version = "0.12.4", features = ["blocking", "json"] }
 clap = { version = "4.5.20", features = ["derive"] }
 serde = { version = "1.0.210", features = ["derive"] }
+dirs = "5.0.1"
+sha2 = "0.10.8"
+serde_json = "1.0.132"
