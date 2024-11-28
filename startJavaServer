@@ -1,0 +1,14 @@
+#!/bin/bash
+export MAIN_DIR=$PWD
+export JAVA=/usr/lib/jvm/java-21-openjdk-amd64/bin/java  # Update this path accordingly
+cd server
+
+mem=$(grep MemTotal /proc/meminfo | sed -e 's/MemTotal:[ ]*//' | sed -e 's/ kB//') # Calculate memory
+
+mem=$(($mem/1024/1024))
+
+# Uncomment this line for Minecraft server versions 1.17+
+$JAVA -Xmx${mem}G -Xms${mem}G -jar server.jar nogui
+
+# Uncomment this line for Minecraft server versions 1.16 or lower
+# java -Xmx${mem}G -Xms${mem}G -jar server.jar nogui
